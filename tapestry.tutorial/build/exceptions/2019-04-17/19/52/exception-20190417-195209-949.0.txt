@@ -1,0 +1,193 @@
+EXCEPTION STACK:
+
+
+  Exception: org.apache.tapestry5.runtime.ComponentEventException
+    Message: Unknown entity: com.example.tapestry.tutorial.entity.Address
+    context: org.apache.tapestry5.internal.EmptyEventContext@490114b7
+  eventType: action
+   location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+
+  Exception: org.apache.tapestry5.ioc.internal.OperationException
+    Message: Unknown entity: com.example.tapestry.tutorial.entity.Address
+   location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+      trace: Handling traditional 'action' component event request for Contact:beaneditform.form.
+             Triggering event 'action' on Contact:beaneditform.form
+             Triggering event 'success' on Contact:beaneditform.form
+
+  Exception: org.apache.tapestry5.runtime.ComponentEventException
+    Message: Unknown entity: com.example.tapestry.tutorial.entity.Address
+    context: org.apache.tapestry5.internal.EmptyEventContext@490114b7
+  eventType: success
+   location: classpath:org/apache/tapestry5/corelib/components/BeanEditForm.tml, line 2
+
+  Exception: org.hibernate.MappingException
+    Message: Unknown entity: com.example.tapestry.tutorial.entity.Address
+
+  Stack trace:
+
+  - org.hibernate.internal.SessionFactoryImpl.getEntityPersister(SessionFactoryImpl.java:1096)
+  - org.hibernate.internal.SessionImpl.getEntityPersister(SessionImpl.java:1452)
+  - org.hibernate.engine.internal.ForeignKeys.isTransient(ForeignKeys.java:242)
+  - org.hibernate.event.internal.AbstractSaveEventListener.getEntityState(AbstractSaveEventListener.java:511)
+  - org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:116)
+  - org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:75)
+  - org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:811)
+  - org.hibernate.internal.SessionImpl.persist(SessionImpl.java:784)
+  - org.hibernate.internal.SessionImpl.persist(SessionImpl.java:789)
+  - $Session_6c7aa87e6d58.persist(Unknown Source)
+  - $Session_6c7aa87e6c4c.persist(Unknown Source)
+  - com.example.tapestry.tutorial.pages.Contact.advised$onSuccess_6c7aa87e6d4f(Contact.java:26)
+  - com.example.tapestry.tutorial.pages.Contact$Invocation_onSuccess_6c7aa87e6d4e.proceedToAdvisedMethod(Unknown Source)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:90)
+  - org.apache.tapestry5.internal.hibernate.CommitAfterWorker$1.advise(CommitAfterWorker.java:54)
+  - org.apache.tapestry5.internal.plastic.AbstractMethodInvocation.proceed(AbstractMethodInvocation.java:92)
+  - com.example.tapestry.tutorial.pages.Contact.onSuccess(Contact.java)
+  - com.example.tapestry.tutorial.pages.Contact.dispatchComponentEvent(Contact.java)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.dispatchEvent(ComponentPageElementImpl.java:917)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.processEventTriggering(ComponentPageElementImpl.java:1102)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.access$3100(ComponentPageElementImpl.java:57)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1047)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1044)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1260)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementResourcesImpl.invoke(ComponentPageElementResourcesImpl.java:154)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.triggerContextEvent(ComponentPageElementImpl.java:1043)
+  - org.apache.tapestry5.internal.structure.InternalComponentResourcesImpl.triggerContextEvent(InternalComponentResourcesImpl.java:288)
+  - org.apache.tapestry5.corelib.components.Form.onAction(Form.java:549)
+  - org.apache.tapestry5.corelib.components.Form.dispatchComponentEvent(Form.java)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.dispatchEvent(ComponentPageElementImpl.java:917)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.processEventTriggering(ComponentPageElementImpl.java:1102)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.access$3100(ComponentPageElementImpl.java:57)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1047)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl$5.invoke(ComponentPageElementImpl.java:1044)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.invoke(OperationTrackerImpl.java:82)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.invoke(PerThreadOperationTracker.java:72)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.invoke(RegistryImpl.java:1260)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementResourcesImpl.invoke(ComponentPageElementResourcesImpl.java:154)
+  - org.apache.tapestry5.internal.structure.ComponentPageElementImpl.triggerContextEvent(ComponentPageElementImpl.java:1043)
+  - org.apache.tapestry5.internal.services.ComponentEventRequestHandlerImpl.handle(ComponentEventRequestHandlerImpl.java:73)
+  - org.apache.tapestry5.internal.services.AjaxFilter.handle(AjaxFilter.java:42)
+  - $ComponentEventRequestHandler_6c7aa87e6dc3.handle(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$37.handle(TapestryModule.java:2216)
+  - $ComponentEventRequestHandler_6c7aa87e6dc3.handle(Unknown Source)
+  - $ComponentEventRequestHandler_6c7aa87e6cb2.handle(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentRequestHandlerTerminator.handleComponentEvent(ComponentRequestHandlerTerminator.java:43)
+  - org.apache.tapestry5.internal.services.DeferredResponseRenderer.handleComponentEvent(DeferredResponseRenderer.java:45)
+  - $ComponentRequestHandler_6c7aa87e6cb4.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.services.InitializeActivePageName.handleComponentEvent(InitializeActivePageName.java:39)
+  - $ComponentRequestHandler_6c7aa87e6cb4.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:55)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker$1.perform(RequestOperationTracker.java:52)
+  - org.apache.tapestry5.ioc.internal.OperationTrackerImpl.perform(OperationTrackerImpl.java:110)
+  - org.apache.tapestry5.ioc.internal.PerThreadOperationTracker.perform(PerThreadOperationTracker.java:84)
+  - org.apache.tapestry5.ioc.internal.RegistryImpl.perform(RegistryImpl.java:1266)
+  - org.apache.tapestry5.internal.services.RequestOperationTracker.handleComponentEvent(RequestOperationTracker.java:47)
+  - $ComponentRequestHandler_6c7aa87e6cb4.handleComponentEvent(Unknown Source)
+  - $ComponentRequestHandler_6c7aa87e6c80.handleComponentEvent(Unknown Source)
+  - org.apache.tapestry5.internal.services.ComponentEventDispatcher.dispatch(ComponentEventDispatcher.java:48)
+  - $Dispatcher_6c7aa87e6c82.dispatch(Unknown Source)
+  - $Dispatcher_6c7aa87e6c77.dispatch(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$RequestHandlerTerminator.service(TapestryModule.java:305)
+  - org.apache.tapestry5.internal.services.RequestErrorFilter.service(RequestErrorFilter.java:26)
+  - $RequestHandler_6c7aa87e6c78.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$3.service(TapestryModule.java:846)
+  - $RequestHandler_6c7aa87e6c78.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$2.service(TapestryModule.java:836)
+  - $RequestHandler_6c7aa87e6c78.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.StaticFilesFilter.service(StaticFilesFilter.java:89)
+  - $RequestHandler_6c7aa87e6c78.service(Unknown Source)
+  - com.example.tapestry.tutorial.services.AppModule$1.service(AppModule.java:113)
+  - $RequestFilter_6c7aa87e6c72.service(Unknown Source)
+  - $RequestHandler_6c7aa87e6c78.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:105)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter$2.invoke(CheckForUpdatesFilter.java:95)
+  - org.apache.tapestry5.ioc.internal.util.ConcurrentBarrier.withRead(ConcurrentBarrier.java:83)
+  - org.apache.tapestry5.internal.services.CheckForUpdatesFilter.service(CheckForUpdatesFilter.java:119)
+  - $RequestHandler_6c7aa87e6c78.service(Unknown Source)
+  - $RequestHandler_6c7aa87e6c6c.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$HttpServletRequestHandlerTerminator.service(TapestryModule.java:256)
+  - org.apache.tapestry5.internal.gzip.GZipFilter.service(GZipFilter.java:59)
+  - $HttpServletRequestHandler_6c7aa87e6c6e.service(Unknown Source)
+  - org.apache.tapestry5.internal.services.IgnoredPathsFilter.service(IgnoredPathsFilter.java:62)
+  - $HttpServletRequestFilter_6c7aa87e6c69.service(Unknown Source)
+  - $HttpServletRequestHandler_6c7aa87e6c6e.service(Unknown Source)
+  - org.apache.tapestry5.modules.TapestryModule$1.service(TapestryModule.java:796)
+  - $HttpServletRequestHandler_6c7aa87e6c6e.service(Unknown Source)
+  - $HttpServletRequestHandler_6c7aa87e6c68.service(Unknown Source)
+  - org.apache.tapestry5.TapestryFilter.doFilter(TapestryFilter.java:166)
+  - org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1148)
+  - org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:387)
+  - org.mortbay.jetty.security.SecurityHandler.handle(SecurityHandler.java:216)
+  - org.mortbay.jetty.servlet.SessionHandler.handle(SessionHandler.java:181)
+  - org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+  - org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417)
+  - org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+  - org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+  - org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+  - org.mortbay.jetty.Server.handle(Server.java:324)
+  - org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:535)
+  - org.mortbay.jetty.HttpConnection$RequestHandler.content(HttpConnection.java:880)
+  - org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:747)
+  - org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:218)
+  - org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+  - org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+  - org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:520)
+
+REQUEST:
+
+Basic Information:
+
+                contextPath: /tapestry.tutorial
+                     method: POST
+                       path: /contact.beaneditform.form
+                     locale: en_US
+                 serverName: localhost
+                 remoteHost: 127.0.0.1
+
+Headers:
+
+                     Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+            Accept-Encoding: gzip, deflate
+            Accept-Language: en-US,en;q=0.5
+                 Connection: keep-alive
+             Content-Length: 1046
+               Content-Type: application/x-www-form-urlencoded
+                     Cookie: JSESSIONID=1vxsmpgfw48kd
+                       Host: localhost:8080
+                    Referer: http://localhost:8080/tapestry.tutorial/contact
+  Upgrade-Insecure-Requests: 1
+                 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0
+
+Parameters:
+                       city: pune
+                      email: avadhoot.kharpe@emtecinc.com
+                  firstName: avadhoot
+                  honorific: MR
+                   lastName: kharpe
+                      phone: 9848944430
+                      state: maharashtra
+                    street1: D.P road
+                    street2: -
+                 t:formdata: HSZUIXdY1xNRg8gljMa0MvaRP9c=:H4sIAAAAAAAAAN2XQWsTQRTHx2hsNSC1YIsIpcUIKnSDTXuJB2lLbC2xFIJ6EpndvE1HZ2emM69NIujJg34Jv0DVo0cRehAvfgXxA3hR8aIHZ5KKihgzC+lhT7ss+5v/29+bWWaefST51hQ5sywF0ggrIVABDYax1EngbqQmRpOK1M2AKhptQoBUgUHdWQgiqYGz0F4TJQUINMGS5atdrLihQVENt8bWC7vtl6dzhLRV6yyZ7hMVcCmVywsGzatZoDj3ScUXViZ2rwwxo/z6/KPV8pfnpJcxSy72y1BaKtDY+WVwZdC0jX1032IdcFtVxQ7TUiT2hbWTua335dJsjhyqkdGfOUjGa3fpDi1xKpqlOmommpfbCsmxTSmkZjGLWjNkysWVfg9Y4jK6ZyoGOEToylzoW2ZIDQSLoX1oP/wqA97o1Xfuxl7hw6k337tFFSIrRku+ThPYIg/JSJo6Fn3rsKNFYEx9O0yYMUyKvReN+fjr03cp+3UtZb+WuR3+j44lN189mF6d/DbEyTnvvwBcZ/K+Whx01DYzZtqg62+rSGb+1UyENsauNz3uuD/nsBOeNTpmbGAD40N3NcppGlWeWBZMjdg5DoCX/ET5URnyNJfK04BUFjwdiRh2/CR5IFkwlDdI0fPH5MNkwdHh+0z5GRqcyIKfPCSUcc855MFkwpGyu1/fdebBHISj/58RqynOiH/vlu9cX3vy9vbnx92d7A9yhTsNng4AAA==
+                   t:submit: ["",""]
+                        zip: 41103
+
+SYSTEM INFORMATION:
+
+Memory:
+      109,828,184 bytes free
+      278,921,216 bytes total
+      559,415,296 bytes max
+
+10 Threads:
+                                                           Reference Handler WAITING, daemon, priority 10
+                                                                   Finalizer WAITING, daemon, priority 8
+                                                           Signal Dispatcher RUNNABLE, daemon, priority 9
+                                                                        main WAITING
+                                                  569976699@qtp-1831705084-0 TIMED_WAITING
+  538618049@qtp-1831705084-1 - Acceptor0 SelectChannelConnector@0.0.0.0:8080 RUNNABLE
+                                                                     Timer-0 TIMED_WAITING, daemon
+                                                       HSQLDB Timer @6d9f7bd TIMED_WAITING, daemon
+                                                             pool-1-thread-1 TIMED_WAITING
+*                                                 973426024@qtp-1831705084-3 RUNNABLE
